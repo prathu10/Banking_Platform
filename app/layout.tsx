@@ -1,23 +1,23 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter, IBM_Plex_Serif } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const ibmPlexSerif = IBM_Plex_Serif({
+  variable: "--font-ibm-plex-serif",
   subsets: ["latin"],
   weight: ['400', '700'],
 });
 
 export const metadata: Metadata = {
-  title: "CredenceX",
+  title: "Trezo",
   description: "Empowering your financial journey with secure, innovative, and intuitive digital banking solutions for the modern era.",
   icons: {
-    icon: '/icons/logo.svg'
+    icon: 'public/icons/logo.svg'
   }
 };
 
@@ -30,7 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${inter.variable} ${ibmPlexSerif.variable} antialiased`}
       >
         {children}
       </body>
